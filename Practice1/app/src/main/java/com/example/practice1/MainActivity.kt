@@ -53,7 +53,8 @@ fun MessageCard(msg: Message) {
 
         Spacer(modifier = Modifier.width(8.dp)) // 너비 8dp짜리 빈 공간 생성
 
-        var isExpand by remember { mutableStateOf(false) }
+        var isExpand by remember { mutableStateOf(false) } // isExpand의 상태를 기억함, 상태가 바뀌면 ui가 재구성
+        //remember은 observe와 비슷한 기능?
         /*
         state 생성하는 방법
         val isExpand : MutableState<Boolean> = remember {
